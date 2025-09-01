@@ -1,5 +1,5 @@
 {
-  "name": "jose",
+  "name": "@nichoth/jose",
   "version": "6.1.0",
   "description": "JWA, JWS, JWE, JWT, JWK, JWKS for Node.js, Browser, Cloudflare Workers, Deno, Bun, and other Web-interoperable runtimes",
   "keywords": [
@@ -228,7 +228,9 @@
     "tap:edge-runtime": "./tap/.edge-runtime.sh",
     "tap:electron": "./tap/.electron.sh",
     "tap:node": "bash -c './tap/.node.sh'",
-    "tap:workerd": "./tap/.workerd.sh"
+    "tap:workerd": "./tap/.workerd.sh",
+    "prepublishOnly": "npm run build",
+    "postversion": "git push --follow-tags && npm publish"
   },
   "devDependencies": {
     "@types/node": "^22.18.0",

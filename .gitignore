@@ -119,7 +119,6 @@ dist-browser-tests
 .pnp.*
 
 
-.npmrc
 tap/*.js
 tap/*.js.map
 tap/run-*.mjs
